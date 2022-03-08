@@ -1,0 +1,28 @@
+
+<div class="card" *ngFor="let card of cards; let i = index">
+        <div class="image" style="cursor: pointer;" (click)="openBlogDetails(i)">
+            <img src="https://picsum.photos/536" alt="" class="blog-image">
+        </div>
+        <div class="text" style="cursor: pointer;" (click)="openBlogDetails(i)">
+            <p class="blog-header">{{'posted by'|uppercase}} {{card.author|uppercase}} | {{card.postDate|date|uppercase}} </p>
+            <p class="blog-title">{{card.title|uppercase}}</p>
+            <p class="blog-content">{{card.content}}</p>
+            <hr>
+        </div>
+       
+        <div class="footer">
+            <div class="like">
+                <a style="cursor: pointer;" (click)="onLike(i)"><i class="fa fa-heart-o">   </i></a>
+                <p>{{card.likes}} LIKES</p>
+            </div>
+           
+            <div class="comment" style="cursor: pointer;">
+                <a><i class="fa fa-comment-o"></i></a>
+                <p>LEAVE A COMMENT</p>
+            </div>
+
+        </div>
+</div>
+
+
+

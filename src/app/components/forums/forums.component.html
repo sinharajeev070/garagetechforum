@@ -1,0 +1,16 @@
+<table>
+    <tr>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Written By</th>
+      <th>Created On</th>
+      <th>Content</th>
+    </tr>
+    <tr *ngFor="let blog of blog">
+      <td>{{blog.postCategory}}</td>
+      <td>{{blog.title}}</td>
+      <td>{{blog.author}}</td>
+      <td>{{blog.postDate|date}}</td>
+      <td>{{blog.content}}</td>
+    </tr>
+  </table>

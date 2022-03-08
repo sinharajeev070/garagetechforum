@@ -1,0 +1,25 @@
+table{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+table th{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid red;
+}
+
+table td{
+    padding: 20px;
+}
+
+table tr{
+    border-bottom: 2px solid red;
+}
+
+table tr:last-child{
+    border: none;
+}

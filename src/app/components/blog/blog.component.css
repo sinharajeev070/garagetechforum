@@ -1,0 +1,45 @@
+.blog-form-div{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    /* margin-top: 80px; */
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: center;
+    background-color: rgb(218, 163, 163);
+    border-radius: 10px;
+}
+
+.blog-form-div h3{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.blog-form div{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.blog-form div input, textarea{
+    width: 70%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.blog-form button{
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+@media screen and (max-width:700px) {
+    .blog-form-div{
+        width: 90%;
+    }
+    
+}

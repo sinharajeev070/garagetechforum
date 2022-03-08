@@ -1,0 +1,71 @@
+
+.card{
+    width:400px;
+    /* background-color: aqua; */
+    margin: 10px;
+    border:none;
+    border-radius: 10px;
+}
+
+.image{
+    text-align: center;
+}
+
+.blog-image{
+    width: 100%;
+    height: 300px;
+    overflow-x: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text{
+    padding: 5%;
+}
+
+.text hr{
+    width: 30px;
+    border: none;
+    border-top: 4px solid rgb(36, 35, 35);
+    opacity: 1;
+}
+
+.blog-header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.blog-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.blog-content{
+    text-align: justify;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+.footer{
+   display: grid;
+   grid-template-columns: 30% 70%;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+}
+
+.like{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comment{
+    display: flex;
+    justify-content: center;
+}
+
+.comment p{
+    padding-left: 5px;
+}
+
+
+

@@ -1,0 +1,27 @@
+<div class="col-md-9 col-md-push-1 filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <form action="#" method="get" id="searchForm" class="input-group">
+                    
+                    <div class="input-group-btn search-panel" style="background-color: white;">
+                        <select name="search_param" id="search_param" class="btn btn-default dropdown-toggle" data-toggle="dropdown" (change)="searchIn($event)">
+                            <option value="title">Title</option>
+                            <option value="post-category">Category</option>
+                            <option value="author">Author</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control" id="x" (keyup)="search($event)" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                           <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </form>
+            </div>     
+        </div>
+    </div>
+</div>
+
+
+<app-blog-card class="blog-cards"></app-blog-card>
