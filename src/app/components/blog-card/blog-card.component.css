@@ -43,7 +43,13 @@
     text-align: justify;
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
+    line-height: 18px;
+    max-height: 54px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
+
+
 
 .footer{
    display: grid;
@@ -67,5 +73,8 @@
     padding-left: 5px;
 }
 
-
-
+.z-index{
+    position: absolute;
+    z-index: 2;
+    top:500px;
+}

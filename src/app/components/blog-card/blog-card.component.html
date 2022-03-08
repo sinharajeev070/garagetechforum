@@ -1,12 +1,14 @@
 
-<div class="card" *ngFor="let card of cards; let i = index">
-        <div class="image" style="cursor: pointer;" (click)="openBlogDetails(i)">
+<div class="card" *ngFor="let card of cards; let i = index" [ngStyle]="{'opacity':display===true?0.2:1}">
+        <div class="image">
             <img src="https://picsum.photos/536" alt="" class="blog-image">
         </div>
-        <div class="text" style="cursor: pointer;" (click)="openBlogDetails(i)">
+        <div class="text">
             <p class="blog-header">{{'posted by'|uppercase}} {{card.author|uppercase}} | {{card.postDate|date|uppercase}} </p>
             <p class="blog-title">{{card.title|uppercase}}</p>
             <p class="blog-content">{{card.content}}</p>
+            <a (click)="openBlogDetails(i)" style="text-decoration: none; color: blue; cursor: pointer;">...Read More</a>
+            
             <hr>
         </div>
        
@@ -16,13 +18,15 @@
                 <p>{{card.likes}} LIKES</p>
             </div>
            
-            <div class="comment" style="cursor: pointer;">
+            <div class="comment" style="cursor: pointer;" (click)="openBlogDetails(i)">
                 <a><i class="fa fa-comment-o"></i></a>
                 <p>LEAVE A COMMENT</p>
             </div>
 
         </div>
 </div>
+
+<app-full-blog class="z-index" *ngIf="display" [blogs]="cards" [index]="index" [display]=display (displayChanged)="displayChange($event)"></app-full-blog>
 
 
 

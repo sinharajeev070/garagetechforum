@@ -7,11 +7,11 @@ import { BlogsService } from 'src/app/blogs.service';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-  filterBlogs:any = [];
+  filterBlogs:any =[];
   searchType:string = "";
 
   constructor(private blogs:BlogsService) { 
-    // this.filterBlogs=this.blogs.blogData;
+    this.filterBlogs=this.blogs.blogData;
   }
 
   ngOnInit(): void {
@@ -24,6 +24,9 @@ export class FilterComponent implements OnInit {
   }
 
   search(event:any){
+      // if(this.searchType==="select"){
+      //   this.filterBlogs=this.blogs.blogData;
+      // }
       if(this.searchType==="title"){
         this.filterBlogs=this.blogs.blogData.filter((ele: {title: string})=>ele.title.includes(event.target.value));
       }
@@ -36,8 +39,8 @@ export class FilterComponent implements OnInit {
       else{
         this.filterBlogs=this.blogs.blogData;
       }
-      this.blogs.filterBlogData = this.filterBlogs;
-      console.log(this.blogs.filterBlogData); 
+      
+      console.log(this.filterBlogs); 
   }
 }
 

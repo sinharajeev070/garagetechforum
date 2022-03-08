@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BlogsService } from 'src/app/blogs.service';
+
 
 @Component({
   selector: 'app-blog-card',
@@ -7,21 +7,27 @@ import { BlogsService } from 'src/app/blogs.service';
   styleUrls: ['./blog-card.component.css']
 })
 export class BlogCardComponent implements OnInit {
-  cards:any = [];
+  
+  @Input()cards!: any[];
 
-  constructor(private blogs:BlogsService) {
-    this.cards = this.blogs.filterBlogData;
-  }
+  index!: number;
+  display! :boolean;
+
+  constructor() {}
 
   ngOnInit(): void {
   }
 
   openBlogDetails(i:number){
-    alert("Blog Details \nBlog Title : " + this.cards[i].title + "\nBlog Category : " + this.cards[i].postCategory +
-          "\nBlog Submission Date : " + this.cards[i].postDate + "\nAuthor : " + this.cards[i].author);
+   this.index = i;
+   this.display = true;
   }
 
   onLike(i:number){
     this.cards[i].likes++;
+  }
+
+  displayChange(display:boolean){
+    this.display=display;
   }
 }

@@ -1,0 +1,40 @@
+.full-blog{
+    margin: 20% auto;
+    width:40%;
+    height: fit-content;
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+.full-blog .header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* background-color:whitesmoke; */
+}
+.full-blog .header h3{
+    
+    /* margin-top: 5px; */
+    padding: 0 20px;
+    cursor: pointer;   
+}
+
+.full-blog .body{
+    margin: auto;
+    width: 90%;
+}
+
+.full-blog .body #content{
+    text-align: justify;
+}
+
+.full-blog .body #title{
+    text-align: center;
+    font-weight: 800;
+}
+
+.full-blog .footer{
+    padding: 20px;
+    text-align: center;
+    font-weight: 800;
+}
