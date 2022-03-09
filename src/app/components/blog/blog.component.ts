@@ -18,6 +18,7 @@ export class BlogComponent implements OnInit {
     alert("Blog Submitted!")
     blogDetails.reset();
   }
+ 
   ngOnInit(): void {
     
   }
