@@ -4,6 +4,7 @@
     height: fit-content;
     background-color: aqua;
     border-radius: 20px;
+
 }
 
 .full-blog .header{
@@ -37,4 +38,41 @@
     padding: 20px;
     text-align: center;
     font-weight: 800;
+}
+
+.comment-box{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.comment-box input{
+    width: 100%;
+    margin:5px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid red;
+}
+
+.comment-box button{
+    margin:5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment-box li{
+    list-style: none;
+}
+
+.comment-box .comment-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.comment-box .comment-list{
+    font-size: 12px;
 }

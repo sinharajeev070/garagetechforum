@@ -10,4 +10,24 @@
         <p>{{blogs[index].author|uppercase}}</p>
         <p>{{blogs[index].postDate|date|uppercase}}</p>
     </div>
+    <div class="comment-box">
+        <form action="" #comment = "ngForm" (ngSubmit)="addComment(comment)">
+            <input type="text" name="name" placeholder="Your Name" ngModel required>
+            <input type="text" name="comment" placeholder="Your Comment" ngModel required>
+            <button class="btn btn-primary" type="submit" [disabled]="comment.invalid">Leave Comment</button>
+        </form>
+        <div class="comments">
+            <h5 style="text-align: center; margin-bottom: 0; margin-top: 5px; color:blue;">Comments</h5>
+            <hr>
+            <div class="" *ngFor="let comment of blogs[index].comments">
+                <div class="comment-header">
+                    <li>{{comment.commentBy|uppercase}}</li>
+                    <li>{{comment.commentDate|date|uppercase}}</li>
+                </div>
+                <li class="comment-list">{{comment.comment|uppercase}}</li>
+                <hr>
+            </div>
+            
+        </div>
+    </div>
 </div>

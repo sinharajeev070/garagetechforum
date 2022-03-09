@@ -13,6 +13,7 @@ export class BlogComponent implements OnInit {
   createBlog(blogDetails:any){
     this.blog=blogDetails.value;
     this.blog.likes=0;
+    this.blog.comment = [];
     this.blogs.blogData.unshift(this.blog);
     alert("Blog Submitted!")
     blogDetails.reset();

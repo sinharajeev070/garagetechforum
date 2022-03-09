@@ -14,7 +14,7 @@ import { BlogsService } from './blogs.service';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FullBlogComponent } from './components/full-blog/full-blog.component';
-import { CommentsComponent } from './components/comments/comments.component';
+
 
 
 @NgModule({
@@ -29,7 +29,6 @@ import { CommentsComponent } from './components/comments/comments.component';
     BlogCardComponent,
     FilterComponent,
     FullBlogComponent,
-    CommentsComponent,
   ],
   imports: [
     BrowserModule,

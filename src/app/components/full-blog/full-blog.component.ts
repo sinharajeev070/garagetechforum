@@ -10,6 +10,8 @@ export class FullBlogComponent implements OnInit {
   @Input() index!: number;
   @Input() display! :boolean;
 
+  comment:any = {};
+
   @Output() displayChanged: EventEmitter<boolean> =   new EventEmitter();
 
 
@@ -21,6 +23,15 @@ export class FullBlogComponent implements OnInit {
   onCloseBlog(){
     this.display = false;
     this.displayChanged.emit(this.display);
+  }
+
+  addComment(comment:any){
+    this.comment.comment= comment.value.comment;
+    this.comment.commentBy=comment.value.name;
+    this.comment.commentDate = Date.now();
+
+    this.blogs[this.index].comments.unshift(this.comment);
+    comment.reset();
   }
 
 }

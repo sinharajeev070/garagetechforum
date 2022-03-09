@@ -28,13 +28,13 @@ export class FilterComponent implements OnInit {
       //   this.filterBlogs=this.blogs.blogData;
       // }
       if(this.searchType==="title"){
-        this.filterBlogs=this.blogs.blogData.filter((ele: {title: string})=>ele.title.includes(event.target.value));
+        this.filterBlogs=this.blogs.blogData.filter((ele: {title: string})=>ele.title.toLowerCase().includes(event.target.value.toLowerCase()));
       }
       else if(this.searchType==="post-category"){
-        this.filterBlogs=this.blogs.blogData.filter((ele: { postCategory: string })=>ele.postCategory.includes(event.target.value));
+        this.filterBlogs=this.blogs.blogData.filter((ele: { postCategory: string })=>ele.postCategory.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
       }
       else if(this.searchType==="author"){
-        this.filterBlogs=this.blogs.blogData.filter((ele: { author: string })=>ele.author.includes(event.target.value));
+        this.filterBlogs=this.blogs.blogData.filter((ele: { author: string })=>ele.author.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
       }
       else{
         this.filterBlogs=this.blogs.blogData;
