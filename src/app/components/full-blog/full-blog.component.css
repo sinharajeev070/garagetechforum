@@ -1,15 +1,15 @@
 .full-blog{
-    margin: 20% auto;
-    width:40%;
+    margin:  100px auto;
+    width: 90%;
     height: fit-content;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
 
 }
 
 .full-blog .header{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     /* background-color:whitesmoke; */
 }
@@ -42,7 +42,7 @@
 
 .comment-box{
     margin: auto;
-    width: 60%;
+    width: 30%;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -50,9 +50,18 @@
     width: 100%;
     margin:5px;
     padding: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     outline: none;
-    border: 1px solid red;
+    border: 1px solid rgb(105, 90, 90);
+}
+
+.comment-box textarea{
+    width: 100%;
+    margin:5px;
+    padding: 10px;
+    /* border-radius: 10px; */
+    outline: none;
+    border: 1px solid rgb(105, 90, 90);
 }
 
 .comment-box button{

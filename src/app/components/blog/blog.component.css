@@ -7,7 +7,7 @@
     margin-top: 20px;
     padding: 20px;
     justify-content: center;
-    background-color: rgb(218, 163, 163);
+    border: 1px solid black;
     border-radius: 10px;
 }
 
@@ -19,16 +19,22 @@
 .blog-form div{
     display: flex;
     padding: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     justify-content: space-between;
 }
 
 .blog-form div input, textarea{
     width: 70%;
     padding: 5px 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     outline: none;
     border: none;
+}
+
+small{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
 }
 
 .blog-form button{

@@ -12,9 +12,9 @@
     </div>
     <div class="comment-box">
         <form action="" #comment = "ngForm" (ngSubmit)="addComment(comment)">
-            <input type="text" name="name" placeholder="Your Name" ngModel required>
-            <input type="text" name="comment" placeholder="Your Comment" ngModel required>
-            <button class="btn btn-primary" type="submit" [disabled]="comment.invalid">Leave Comment</button>
+            <input type="text" name="commentBy" placeholder="Your Name" ngModel required>
+            <textarea type="text" name="comment" placeholder="Your Comment" ngModel required></textarea>
+            <button class="btn btn-primary" type="submit" [disabled]="comment.invalid">Add Comment</button>
         </form>
         <div class="comments">
             <h5 style="text-align: center; margin-bottom: 0; margin-top: 5px; color:blue;">Comments</h5>

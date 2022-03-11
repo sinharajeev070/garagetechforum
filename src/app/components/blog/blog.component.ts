@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from 'src/app/blogs.service';
 
@@ -8,6 +9,15 @@ import { BlogsService } from 'src/app/blogs.service';
 })
 export class BlogComponent implements OnInit {
   blog:any = {};
+  
+  today = new Date();
+  dd = String(this.today.getDate()).padStart(2, '0');
+  mm = String(this.today.getMonth() + 1).padStart(2, '0'); 
+  yyyy = this.today.getFullYear();
+
+  currDate:any = this.yyyy + '-' + this.mm + '-' + this.dd; 
+
+  
   constructor(private blogs:BlogsService) { }
 
   createBlog(blogDetails:any){
@@ -18,6 +28,9 @@ export class BlogComponent implements OnInit {
     alert("Blog Submitted!")
     blogDetails.reset();
   }
+
+  
+ 
  
   ngOnInit(): void {
     

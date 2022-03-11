@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { BlogsService } from 'src/app/blogs.service';
 
 @Component({
   selector: 'app-full-blog',
@@ -10,7 +11,7 @@ export class FullBlogComponent implements OnInit {
   @Input() index!: number;
   @Input() display! :boolean;
 
-  comment:any = {};
+  comments:any = [];
 
   @Output() displayChanged: EventEmitter<boolean> =   new EventEmitter();
 
@@ -26,11 +27,12 @@ export class FullBlogComponent implements OnInit {
   }
 
   addComment(comment:any){
-    this.comment.comment= comment.value.comment;
-    this.comment.commentBy=comment.value.name;
-    this.comment.commentDate = Date.now();
-
-    this.blogs[this.index].comments.unshift(this.comment);
+    comment.value.commentDate = Date.now();
+    console.log(comment.value);
+    this.comments.unshift(comment.value);
+    console.log(this.comments);
+    this.blogs[this.index].comments = this.comments;
+    
     comment.reset();
   }
 

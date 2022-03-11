@@ -24,9 +24,7 @@ export class FilterComponent implements OnInit {
   }
 
   search(event:any){
-      // if(this.searchType==="select"){
-      //   this.filterBlogs=this.blogs.blogData;
-      // }
+      
       if(this.searchType==="title"){
         this.filterBlogs=this.blogs.blogData.filter((ele: {title: string})=>ele.title.toLowerCase().includes(event.target.value.toLowerCase()));
       }
@@ -40,7 +38,7 @@ export class FilterComponent implements OnInit {
         this.filterBlogs=this.blogs.blogData;
       }
       
-      console.log(this.filterBlogs); 
+      // console.log(this.filterBlogs); 
   }
 }
 
