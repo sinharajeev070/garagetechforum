@@ -3,12 +3,3 @@
     width: 50%;
     margin-top: 20px;
 }
-
-.blog-cards{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 0;
-}

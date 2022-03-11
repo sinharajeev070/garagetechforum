@@ -14,6 +14,7 @@ import { BlogsService } from './blogs.service';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FullBlogComponent } from './components/full-blog/full-blog.component';
+import { BlogStatusComponent } from './components/blog-status/blog-status.component';
 
 
 
@@ -29,6 +30,7 @@ import { FullBlogComponent } from './components/full-blog/full-blog.component';
     BlogCardComponent,
     FilterComponent,
     FullBlogComponent,
+    BlogStatusComponent,
   ],
   imports: [
     BrowserModule,

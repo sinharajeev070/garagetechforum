@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { BlogsService } from 'src/app/blogs.service';
+
 
 @Component({
   selector: 'app-full-blog',
@@ -13,7 +13,7 @@ export class FullBlogComponent implements OnInit {
 
   comments:any = [];
 
-  @Output() displayChanged: EventEmitter<boolean> =   new EventEmitter();
+  @Output() displayChanged = new EventEmitter<boolean>();
 
 
   constructor() { }

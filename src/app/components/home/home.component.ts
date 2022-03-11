@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from 'src/app/blogs.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,12 +9,20 @@ import { BlogsService } from 'src/app/blogs.service';
 })
 export class HomeComponent implements OnInit {
   
-  constructor() { 
+  filterBlogs!:any[];
 
+  constructor(private blogs:BlogsService) {
+    this.filterBlogs = this.blogs.blogData; 
+    
   }
 
   ngOnInit(): void {
     
+  }
+
+  filterData(filterBlogs:any){
+    this.filterBlogs=filterBlogs;
+    console.log(filterBlogs);
   }
 
 }

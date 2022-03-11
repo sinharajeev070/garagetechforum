@@ -72,9 +72,3 @@
 .comment p{
     padding-left: 5px;
 }
-
-.z-index{
-    position: absolute;
-    z-index: 2;
-    top:500px;
-}

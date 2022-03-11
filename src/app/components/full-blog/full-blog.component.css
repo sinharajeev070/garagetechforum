@@ -1,9 +1,14 @@
 .full-blog{
-    margin:  100px auto;
-    width: 90%;
-    height: fit-content;
+    position: fixed;
+    z-index: 10;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    height: 90%;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border: 2px solid aquamarine;
+    background-color: whitesmoke;
+    overflow: auto;
 
 }
 
@@ -11,34 +16,42 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* background-color:whitesmoke; */
+    background-color: aquamarine;
+    margin-bottom: 10px;
+
 }
 .full-blog .header h3{
     
     /* margin-top: 5px; */
     padding: 0 20px;
-    cursor: pointer;   
+    cursor: pointer;
+    color: red;   
 }
 
 .full-blog .body{
     margin: auto;
     width: 90%;
-}
-
-.full-blog .body #content{
-    text-align: justify;
-}
-
-.full-blog .body #title{
-    text-align: center;
-    font-weight: 800;
-}
-
-.full-blog .footer{
+    max-height: 300px;
     padding: 20px;
-    text-align: center;
-    font-weight: 800;
+    overflow: auto;
+    background-color: white;
+    text-align: justify;  
+    margin-bottom: 10px;
 }
+
+.full-blog .body .blog-header{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.full-blog .body .blog-content{
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+}
+
 
 .comment-box{
     margin: auto;
@@ -75,13 +88,18 @@
 }
 
 .comment-box .comment-header{
-    display: flex;
-    justify-content: space-between;
+    text-align: left;
     padding: 0 10px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .comment-box .comment-list{
-    font-size: 12px;
+    background-color: white;
+    font-size: 14px;
+    font-style: italic;
+    text-align: left;
+    margin-left: 20px;
+    padding:10px;
 }

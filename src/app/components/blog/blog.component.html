@@ -1,4 +1,4 @@
-<div class='blog-form-div'>
+<div class='blog-form-div' [ngStyle]="{'opacity':displayStatus===true?0.2:1}">
     <h3>Blog Post Form</h3>
     <hr />
     <form action="" #blogDetails="ngForm" (ngSubmit)="createBlog(blogDetails)" class='blog-form'>
@@ -14,7 +14,7 @@
         <small *ngIf="author.touched && author.value===''" style="color: red;">Required Field</small>
         <div class="post-date">
         <label for="post-date">Post Date</label>
-        <input type="date" name='postDate' id='post-date' #date="ngModel" ngModel min = {{currDate}} required/>
+        <input type="date" name='postDate' id='post-date' #date="ngModel" ngModel min = {{currDate}} max = {{currDate}} required/>
         </div>
         <small *ngIf="date.touched && date.value===''" style="color: red;">Required Field</small>
         <div class="post-category">
@@ -29,3 +29,5 @@
         <button type='submit' class='btn btn-primary' [disabled]="blogDetails.invalid">Submit</button>
     </form>
 </div>
+
+<app-blog-status *ngIf="displayStatus"></app-blog-status>

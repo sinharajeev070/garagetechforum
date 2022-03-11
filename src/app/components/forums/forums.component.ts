@@ -29,4 +29,8 @@ export class ForumsComponent implements OnInit {
     this.display=display;
   }
 
+  filterData(filterBlogs:any){
+    this.blog = filterBlogs;
+  }
+
 }

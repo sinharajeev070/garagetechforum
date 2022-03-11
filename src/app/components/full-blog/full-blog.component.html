@@ -3,13 +3,12 @@
         <h3 (click)="onCloseBlog()"><i class="fa fa-times"></i></h3>
     </div>
     <div class="body">
-        <p id="title">{{blogs[index].title | uppercase}}</p>
-        <p id="content">{{blogs[index].content}}</p>
+        <p class="blog-header">{{blogs[index].title | titlecase}}</p>
+        <p class="blog-header">Posted By: {{blogs[index].author|titlecase}}</p>
+        <p class="blog-header">Posted On: {{blogs[index].postDate|date|uppercase}}</p>
+        <p class="blog-content">{{blogs[index].content}}</p>
     </div>
-    <div class="footer">
-        <p>{{blogs[index].author|uppercase}}</p>
-        <p>{{blogs[index].postDate|date|uppercase}}</p>
-    </div>
+   
     <div class="comment-box">
         <form action="" #comment = "ngForm" (ngSubmit)="addComment(comment)">
             <input type="text" name="commentBy" placeholder="Your Name" ngModel required>
@@ -21,8 +20,7 @@
             <hr>
             <div class="" *ngFor="let comment of blogs[index].comments">
                 <div class="comment-header">
-                    <li>{{comment.commentBy|uppercase}}</li>
-                    <li>{{comment.commentDate|date|uppercase}}</li>
+                    <li>{{comment.commentBy|titlecase}} - {{comment.commentDate|date}}</li>
                 </div>
                 <li class="comment-list">{{comment.comment}}</li>
                 <hr>

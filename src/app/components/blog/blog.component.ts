@@ -19,13 +19,15 @@ export class BlogComponent implements OnInit {
 
   
   constructor(private blogs:BlogsService) { }
-
+  
+  displayStatus:boolean = false;
+  
   createBlog(blogDetails:any){
     this.blog=blogDetails.value;
     this.blog.likes=0;
     this.blog.comment = [];
     this.blogs.blogData.unshift(this.blog);
-    alert("Blog Submitted!")
+    this.displayStatus = true;
     blogDetails.reset();
   }
 

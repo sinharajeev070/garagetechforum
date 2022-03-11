@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-blog-card',
   templateUrl: './blog-card.component.html',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BlogCardComponent implements OnInit {
   
-  @Input()cards!: any[];
+  @Input() cards!: any[];
 
   index!: number;
   display! :boolean;
