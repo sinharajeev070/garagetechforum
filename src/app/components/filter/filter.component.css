@@ -1,5 +1,13 @@
 .filter{
-    margin: auto;
-    width: 50%;
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+    width: 400px;
+}
+
+.filter select{
+    z-index: 1;
+}
+
+.filter option{
+    text-align: left;
 }
