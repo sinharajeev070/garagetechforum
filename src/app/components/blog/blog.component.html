@@ -14,7 +14,7 @@
         <small *ngIf="author.touched && author.value===''" style="color: red;">Required Field</small>
         <div class="post-date">
         <label for="post-date">Post Date</label>
-        <input type="date" name='postDate' id='post-date' #date="ngModel" ngModel min = {{currDate}} max = {{currDate}} required/>
+        <input type="date" name='postDate' id='post-date' #date="ngModel" ngModel min = {{currDate}} required/>
         </div>
         <small *ngIf="date.touched && date.value===''" style="color: red;">Required Field</small>
         <div class="post-category">
